@@ -25,9 +25,9 @@ useEffect(()=>{
   if (user) {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/auth.user
-    const {uid,email,displayName} = user;
+    const {uid,email,displayName,photoURL} = auth;
     console.log("userrrrrrrr", user);
-    dispatch(logInUser({uid,email,displayName}))
+    dispatch(logInUser({uid,email,displayName,photoURL}))
     
     // ...
   } 
